@@ -26,8 +26,8 @@ Zicket is a Discord bot that tracks Hand Cricket stats for leagues and tournamen
    ```
    DISCORD_BOT_TOKEN=your-bot-token
    OWNER_ID=your-discord-user-id
-   CAPTAIN_ROLE_ID=...
-   VICE_CAPTAIN_ROLE_ID=...
+   CAPTAIN_ROLE_ID=captain-role-id
+   VICE_CAPTAIN_ROLE_ID=vice-captain-role-id
    ```
 4. In the [Discord Developer Portal](https://discord.com/developers/applications), turn on the **Message Content** and **Server Members** intents for your bot.
 5. Start the bot:
@@ -63,8 +63,7 @@ core/              bot class, events and data storage
 commands/          command modules
 ui/                embeds and interactive views
 utils/             calculations, parsers and image generation
+assets/            backgrounds, fonts and default team logo
 ```
 
-The `assets/` folder (backgrounds, fonts and the default team logo) is not included in this repo. Without it, the wicket graphic and points table images won't work.
-
-Bot data (stats, teams, archived tournaments) is saved as JSON files next to `main.py` while the bot runs. Those files are not committed to the repo.
+Bot data (stats, teams and archived tournaments) is saved as JSON files in the project folder while the bot runs.
